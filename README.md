@@ -1,6 +1,6 @@
 # colab-config-s3-rclone
 
-Run in a colab runtime environment to configure AWS S3 + rclone to simplify syncing files runtime environment data to S3.
+Run in a colab runtime environment to configure AWS S3 + rclone to simplify syncing runtime environment data to S3.
 
 To configure syncing, run this in a Google Colab notebook:
 

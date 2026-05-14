@@ -37,6 +37,7 @@ type = s3
 provider = AWS
 env_auth = true
 region = us-east-1
+no_check_bucket = true
 """
 
 

@@ -59,6 +59,9 @@ def bucket_name_to_shell_config(*, home_dir: str, bucket: str) -> None:
             with open(env_file, "a") as f:
                 f.write("\n\n# MY S3 BUCKET FOR SYNCING\n")
                 f.write(f'export MY_BUCKET="{bucket}"\n\n')
+
+                f.write("# Ensure `rclone copy ./file mys3://$MY_BUCKET/prefix/` succeeds without s3:CreateBucket permission\n")
+                f.write("export RCLONE_S3_NO_CHECK_BUCKET=true\n\n")
             updated_env_files.append(env_file)
 
         if len(updated_env_files):
